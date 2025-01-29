@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs", {title: "Home"}) %>
+
+  <div class="container col-xxl-8 px-4 py-5 text-white">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/images/code_typing.gif" class="d-block mx-lg-auto mg-fluid" alt="Blog Icon" width="700" height="500"
+          loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-center lh-1 mb-3">h e l l 0 w O R l d (:</h1>
+        <p class="lead text-center">This is a site where you can create and post your own information on coding</p>
+        <div class="d-grid gap-2 d-md-flex text-center justify-content-md-start">
+          <a href="/createpost"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 ">
+              Want to create a post? Click Here!</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1>Latest Posts</h1>
+      <% if (posts && posts.length > 0) { %>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <% posts.forEach(function(post, index) { %>
+            <div class="col">
+              <div class="card h-100">
+                < <div class="card-body">
+                  <h3 class="card-title"><a href="/posts/<%= index %>">
+                      <%= post.Post_Header %>
+                    </a></h3>
+                  <p class="card-text text-truncate">
+                    <%= post.Post_Body %>
+                  </p>
+              </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+    <% } else { %>
+      <p>No posts yet.</p>
+      <% }; %>
+  </div>
+
+
+  <%- include("partials/footer.ejs") %>

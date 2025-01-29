@@ -1,0 +1,18 @@
+<%- include('partials/header', { title: 'Edit Post' }) %>
+
+<div class="container py-5">
+  <h1>Edit Post</h1>
+  <form action="/posts/update/<%= postIndex %>" method="POST">
+    <div class="mb-3">
+      <label for="Post_Header" class="form-label">Header</label>
+      <input type="text" class="form-control" id="Post_Header" name="Post_Header" value="<%= post.Post_Header %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="Post_Body" class="form-label">Body</label>
+      <textarea class="form-control" id="Post_Body" name="Post_Body" rows="5" required><%= post.Post_Body %></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Post</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>
