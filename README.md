@@ -46,14 +46,11 @@ npm start
 Open your browser and navigate to http://localhost:3000.
 
 📂 Folder Structure
-php
-Copy
-Edit
 coding-blog/
-├── views/          # EJS templates  
-├── public/         # Static assets (CSS, JS, images)  
-├── index.js          # Main application entry point  
-└── package.json    # Dependencies and scripts
+views/          # EJS templates  
+public/         # Static assets (CSS, JS, images)  
+index.js          # Main application entry point  
+package.json    # Dependencies and scripts
 
 🤝 Contributing
 Contributions are welcome!
