@@ -1,0 +1,26 @@
+<%- include('./partials/header.ejs', {title: post.Post_Header}) %>
+    <br>
+    <div class="container py-5">
+        <h1 class="text-center text-white">
+            <%= post.Post_Header %>
+        </h1>
+        <p class="text-center text-white">
+            <%= post.Post_Body %>
+        </p>
+        <p class="text-center text-white">
+            <%= new Date().toDateString() %>
+        </p>
+    </div>
+    <div class="container">
+        <a href="/" class="btn btn-primary btn-lg px-4 me-md-2">Back to Homepage</a>
+        <a href="/posts/edit/<%= postIndex %>" class="btn btn-primary">Edit Post</a>
+        <form action="/posts/delete/<%= postIndex %>" method="POST"
+            onsubmit="return confirm('Are you sure you want to delete this post?');">
+            <button type="submit" class="btn btn-danger">Delete Post</button>
+        </form>
+    </div>
+
+
+
+
+<%- include('./partials/footer.ejs') %>
