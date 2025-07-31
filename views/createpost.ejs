@@ -1,6 +1,7 @@
 <%- include("partials/header.ejs") %>
 
 <br>
+<<<<<<< HEAD
 <section class="vh-100">
 <div class="container">
 <h1 class="text-white display-3 text-center">Create Your Post</h1>
@@ -9,11 +10,20 @@
   <label for="exampleFormControlInput1" class="text-white form-label">Create Your Header</label>
   <input type="text" class="form-control form-control-lg" id="exampleFormControlInput1" name="Post_Header" 
   placeholder="What Will Your Header Say?">
+=======
+
+<h1 class="text-white display-1">Create Your Post</h1>
+<form action="/submit" method="POST">
+<div class="mb-3"></div>
+  <label for="exampleFormControlInput1" class="text-white form-label">Create Your Header</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" name="Post_Header" placeholder="What Will Your Header Be?">
+>>>>>>> fddc45554bca9e402f6bd447b9ad70fd8f932bb9
 </div>
 <br>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="text-white form-label">What Will It Say?</label>
   <textarea class="form-control" id="Post_Body" rows="3" name="Post_Body"></textarea>
+<<<<<<< HEAD
 </div>
 <div class="d-grid gap-2 d-md-flex text-center justify-content-md-start">
   <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2 text-center">
@@ -22,4 +32,15 @@
 </form>
 </div>
 </section>
+=======
+  <br>
+  <h4><%= new Date() %></h4>
+</div>
+<div class="d-grid gap-2 d-md-flex text-center justify-content-md-start">
+  <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">
+    Submit Your Post!</button>
+</div>
+</form>
+
+>>>>>>> fddc45554bca9e402f6bd447b9ad70fd8f932bb9
 <%- include("partials/footer.ejs") %>
